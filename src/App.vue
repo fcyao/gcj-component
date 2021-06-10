@@ -1,7 +1,7 @@
 <!--
  * 2021-06-10 14:36:00
- * @LastEditTime: 2021-06-10 15:17:35
- * @FilePath: \gcj-component\src\App.vue
+ * @LastEditTime: 2021-06-10 16:35:07
+ * @FilePath: \gcj-ui-component\src\App.vue
  * @Description: 
 -->
 <template>
@@ -14,7 +14,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'App'
 }
