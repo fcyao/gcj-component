@@ -1,3 +1,9 @@
+<!--
+ * 2021-06-10 16:37:16
+ * @LastEditTime: 2021-06-10 16:38:51
+ * @FilePath: \gcj-component\README.md
+ * @Description: 
+-->
 # gcj-component
 
 ## Project setup
@@ -7,17 +13,12 @@ yarn install
 
 ### Compiles and hot-reloads for development
 ```
-yarn serve
+yarn storybook
 ```
 
 ### Compiles and minifies for production
 ```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
+yarn build-storybook
 ```
 
 ### Customize configuration
