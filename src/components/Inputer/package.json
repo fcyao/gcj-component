@@ -4,5 +4,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "e435522be3cd2efc0a50d6ba1d2d7dff1abd75dd"
+  "gitHead": "3c4519c37eeec6a8649b288b6e154931d74a497f",
+  "repository":"ssh://git@github.com:fcyao/gcj-component.git"
 }
