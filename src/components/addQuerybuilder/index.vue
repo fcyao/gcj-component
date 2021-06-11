@@ -226,15 +226,16 @@ export default {
     defaultValue: {
       immediate: true,
       deep: true,
-      handler(newValue, oldValue) {
+      handler() {
         this.segmentform = this.defaultValue
       }
     },
     segmentform: {
       immediate: true,
       deep: true,
-      handler(newValue, oldValue) {
+      handler() {
         this.$emit('update:defaultValue', this.segmentform)
+        
       }
     }
   },
