@@ -1,7 +1,7 @@
-{ 
-  "name": "@gcj-component/inputer", 
-  "version": "0.0.1", 
-  "publishConfig": { 
-    "access": "public" 
-  } 
+{
+  "name": "@gcj-component/inputer",
+  "version": "0.1.0",
+  "publishConfig": {
+    "access": "public"
+  }
 }
