@@ -3,9 +3,9 @@
   "version": "0.3.0",
   "publishConfig": {
     "access": "public",
-    "registry":"https://npm.pkg.github.com/@gcj-component"
+    "registry": "https://npm.pkg.github.com/"
   },
-  "gitHead": "2899bc8cf35e892817499d84c9e37230b06a68fb",
+  "gitHead": "3b0f94d3eb08e4e1e4f7218667fee68b67802a2c",
   "repository": {
     "url": "https://github.com/fcyao/gcj-component.git"
   }
