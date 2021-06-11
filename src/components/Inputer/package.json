@@ -2,11 +2,7 @@
   "name": "@gcj-component/inputer",
   "version": "0.3.0",
   "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   },
-  "gitHead": "4be9827ab656a90594d34b192378927158fcc52c",
-  "repository": {
-    "url": "ssh://git@github.com:fcyao/gcj-component.git"
-  }
+  "gitHead": "e435522be3cd2efc0a50d6ba1d2d7dff1abd75dd"
 }
