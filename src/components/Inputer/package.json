@@ -5,8 +5,8 @@
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
-  "gitHead": "3b0f94d3eb08e4e1e4f7218667fee68b67802a2c",
+  "gitHead": "4be9827ab656a90594d34b192378927158fcc52c",
   "repository": {
-    "url": "https://github.com/fcyao/gcj-component.git"
+    "url": "ssh://git@github.com:fcyao/gcj-component.git"
   }
 }
