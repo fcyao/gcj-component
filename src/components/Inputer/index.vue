@@ -1,3 +1,9 @@
+<!--
+ * 2021-06-10 16:37:16
+ * @LastEditTime: 2021-06-15 14:46:19
+ * @FilePath: \gcj-component\src\components\Inputer\index.vue
+ * @Description: 
+-->
 <template>
   <el-input
     :placeholder="placeholder"
@@ -32,11 +38,3 @@ export default {
   }
 }
 </script>
-<style scoped lang="scss">
-/deep/ [type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-</style>

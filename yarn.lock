@@ -1202,6 +1202,11 @@
   resolved "https://registry.npmjs.org/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
+"@gcj-component/inputer@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.npmjs.org/@gcj-component/inputer/-/inputer-0.2.0.tgz#d8b4b49e27fff5387665decc3cb8f2899715416b"
+  integrity sha512-lEckWU95GpuwPibbrbJMSmmKMotq4eSy4sCJKfTyIEFGfAeIzyLkSsBU1dGAJzplZf1yOgiRa9zy/9SMfPq1gQ==
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.npm.taobao.org/@hapi/address/download/@hapi/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
