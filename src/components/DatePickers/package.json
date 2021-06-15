@@ -1,0 +1,6 @@
+{
+  "name": "@gcj-component/datepicker",
+  "publishConfig": {
+    "access": "public"
+  }
+}

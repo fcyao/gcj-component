@@ -12,6 +12,7 @@
   "dependencies": {
     "@babel/core": "^7.14.5",
     "@gcj-component/inputer": "^0.2.0",
+    "@gcj-component/select-picker": "^0.1.2",
     "@storybook/addon-essentials": "^6.2.9",
     "@storybook/addon-links": "^6.2.9",
     "@storybook/vue": "^6.2.9",

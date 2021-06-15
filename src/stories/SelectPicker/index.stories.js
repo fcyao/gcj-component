@@ -1,5 +1,11 @@
-import '@/stories/baseImport'
-import SelectPicker from '@/components/SelectPicker'
+/*
+ * 2021-06-10 16:37:16
+ * @LastEditTime: 2021-06-15 15:27:19
+ * @FilePath: \gcj-component\src\stories\SelectPicker\index.stories.js
+ * @Description: 
+ */
+
+import SelectPicker from '@gcj-component/select-picker'
 export default {
   title: '下拉组件/下拉选择',
   component: SelectPicker

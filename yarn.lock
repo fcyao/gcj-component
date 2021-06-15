@@ -1207,6 +1207,11 @@
   resolved "https://registry.npmjs.org/@gcj-component/inputer/-/inputer-0.2.0.tgz#d8b4b49e27fff5387665decc3cb8f2899715416b"
   integrity sha512-lEckWU95GpuwPibbrbJMSmmKMotq4eSy4sCJKfTyIEFGfAeIzyLkSsBU1dGAJzplZf1yOgiRa9zy/9SMfPq1gQ==
 
+"@gcj-component/select-picker@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.npmjs.org/@gcj-component/select-picker/-/select-picker-0.1.2.tgz#a398072728b3f313cb5ec7d7d81bb9c1d59e94e7"
+  integrity sha512-XBDzKSRNNrJNzdlQ62PggdRiCjmOvMhTsSfSZUFxDZEG1cDU3uCgodVprGLpw7ewsmAlBr0drwkyKR2WF+jQTQ==
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.npm.taobao.org/@hapi/address/download/@hapi/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
