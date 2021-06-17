@@ -1,15 +1,15 @@
 {
   "packages": [
-    "src/components/*"
+    "src/*"
   ],
   "version": "independent",
-  "command": { 
-    "repository": { 
+  "command": {
+    "repository": {
       "type": "git",
       "url": "ssh://git@github.com:fcyao/gcj-component.git"
     },
     "publishConfig": {
       "registry": "https://npm.pkg.github.com"
     }
-  } 
+  }
 }

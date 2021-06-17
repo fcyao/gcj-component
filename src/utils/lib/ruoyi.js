@@ -5,7 +5,12 @@
 
 const baseURL = process.env.VUE_APP_BASE_API
 
-// 日期格式化
+/**
+ * @description: 日期格式化
+ * @param {*} time
+ * @param {*} pattern
+ * @return {*}
+ */
 export function parseTime(time, pattern) {
   if (arguments.length === 0 || !time) {
     return null
@@ -45,7 +50,12 @@ export function parseTime(time, pattern) {
   })
   return time_str
 }
-// 获取几个月前，几天前
+/**
+ * @description: 获取几个月前，几天前
+ * @param {*} n
+ * @param {*} ymd
+ * @return {*}
+ */
 export function getnDayago(n = 0, ymd = '') {
   if (ymd === 'm') {
     return gettomonthago(n)
@@ -53,7 +63,11 @@ export function getnDayago(n = 0, ymd = '') {
     return parseTime(new Date() - n * 24 * 60 * 60 * 1000, '{y}-{m}-{d}')
   }
 }
-// 获得周一~周日的年月日
+/**
+ * @description: 获得周一~周日的年月日
+ * @param {*} date
+ * @return {*}
+ */
 export function getWeekDate(date) {
   date = new Date(date)
   var thisweek = {}
@@ -67,7 +81,11 @@ export function getWeekDate(date) {
   return [parseTime(thisweek.start_day, '{y}-{m}-{d}'), parseTime(thisweek.end_day, '{y}-{m}-{d}')]
 }
 
-// 初始时间,获取几个月前
+/**
+ * @description: 初始时间,获取几个月前
+ * @param {*} n
+ * @return {*}
+ */
 export function gettomonthago(n) {
   const dt = new Date()
   if (dt.getDate() === 1) {
@@ -78,14 +96,23 @@ export function gettomonthago(n) {
   return parseTime(dt, '{y}-{m}')
 }
 
-// 表单重置
+/**
+ * @description: 表单重置
+ * @param {*} refName
+ * @return {*}
+ */
 export function resetForm(refName) {
   if (this.$refs[refName]) {
     this.$refs[refName].resetFields()
   }
 }
 
-// 添加日期范围
+/**
+ * @description: 添加日期范围
+ * @param {*} params
+ * @param {*} dateRange
+ * @return {*}
+ */
 export function addDateRange(params, dateRange) {
   var search = params
   search.beginTime = ''
@@ -97,7 +124,12 @@ export function addDateRange(params, dateRange) {
   return search
 }
 
-// 回显数据字典
+/**
+ * @description: 回显数据字典
+ * @param {*} datas
+ * @param {*} value
+ * @return {*}
+ */
 export function selectDictLabel(datas, value) {
   var actions = []
   Object.keys(datas).map((key) => {
@@ -109,12 +141,20 @@ export function selectDictLabel(datas, value) {
   return actions.join('')
 }
 
-// 通用下载方法
+/**
+ * @description: 通用下载方法
+ * @param {*} fileName
+ * @return {*}
+ */
 export function download(fileName) {
   window.location.href = baseURL + '/common/download?fileName=' + encodeURI(fileName) + '&delete=' + true
 }
 
-// 字符串格式化(%s )
+/**
+ * @description: 字符串格式化(%s )
+ * @param {*} str
+ * @return {*}
+ */
 export function sprintf(str) {
   var args = arguments; var flag = true; var i = 1
   str = str.replace(/%s/g, function() {
@@ -128,7 +168,11 @@ export function sprintf(str) {
   return flag ? str : ''
 }
 
-// 转换字符串，undefined,null等转化为""
+/**
+ * @description: 转换字符串，undefined,null等转化为""
+ * @param {*} str
+ * @return {*}
+ */
 export function praseStrEmpty(str) {
   if (!str || str === 'undefined' || str === 'null') {
     return ''
@@ -165,9 +209,9 @@ export function handleTree(data, id, parentId, children, rootId) {
 }
 
 /**
-   * 参数处理
-   * @param {*} params  参数
-   */
+ * 参数处理
+ * @param {*} params  参数
+ */
 export function tansParams(params) {
   let result = ''
   Object.keys(params).forEach((key) => {

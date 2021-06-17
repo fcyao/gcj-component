@@ -375,21 +375,38 @@ export const beautifierConf = {
   }
 }
 
-// 首字母大小
+/**
+ * @description: 首字母大小
+ * @param {*} str
+ * @return {*}
+ */
 export function titleCase(str) {
   return str.replace(/( |^)[a-z]/g, L => L.toUpperCase())
 }
 
-// 下划转驼峰
+/**
+ * @description: 下划转驼峰
+ * @param {*} str
+ * @return {*}
+ */
 export function camelCase(str) {
   return str.replace(/-[a-z]/g, str1 => str1.substr(-1).toUpperCase())
 }
 
+/**
+ * @description: 
+ * @param {*} str
+ * @return {*}
+ */
 export function isNumberStr(str) {
   return /^[+-]?(0|([1-9]\d*))(\.\d+)?$/g.test(str)
 }
 
-// 数字分隔
+/**
+ * @description: 数字分隔
+ * @param {*} cellValue
+ * @return {*}
+ */
 export function numsplitFormat(cellValue) {
   if (cellValue) {
     cellValue += ''
@@ -404,7 +421,11 @@ export function numsplitFormat(cellValue) {
   }
 }
 
-// 数字分隔,保留2位小数
+/**
+ * @description: 数字分隔,保留2位小数
+ * @param {*} cellValue
+ * @return {*}
+ */
 export function numsplitFormatDecimals(cellValue) {
   if (cellValue) {
     return Number(cellValue)
@@ -418,10 +439,14 @@ export function numsplitFormatDecimals(cellValue) {
   }
 }
 
-/* // 按年份获取周数
-  params: date ->new Date()
-  state: old 老系统，周划分按正常周 第一周不满一周算一周
-*/
+/**
+ * params: date ->new Date()
+ * state: old 老系统，周划分按正常周 第一周不满一周算一周
+ * @description: 按年份获取周数
+ * @param {*} date
+ * @param {*} state
+ * @return {*}
+ */
 export function getYearWeek(date, state) {
   var date2 = new Date(date.getFullYear(), 0, 1)
   var day1 = date.getDay()
@@ -458,9 +483,11 @@ export function tableDataFormat(data, state) {
   }
 }
 
-/*
-  万元处理
-*/
+/**
+ * @description: 万元处理
+ * @param {*} data
+ * @return {*}
+ */
 export function tablewanFunc(data) {
   if (data || data === 0) {
     return fixednum((data / 10e11), 3)
@@ -468,7 +495,12 @@ export function tablewanFunc(data) {
   return '/'
 }
 
-/** 保留2位小数 */
+/**
+ * @description: 保留2位小数
+ * @param {*} number
+ * @param {*} n
+ * @return {*}
+ */
 export function fixednum(number, n = 2) {
   var f = parseFloat(number)
   if (isNaN(f)) {
@@ -479,10 +511,13 @@ export function fixednum(number, n = 2) {
   return f // float类型
 }
 
-/* 计算百分比 */
-// 分子number1,分母number2
-// null 返回'/',0 返回'0%',其他空值返回'/'
-// 返回百分比,保留2位小数
+/**
+ * @description: 计算百分比
+ * @param {*} number1 分子
+ * @param {*} number2 分母
+ * @return {*} null 返回'/',0 返回'0%',其他空值返回'/' 
+ * 返回百分比,保留2位小数
+ */
 export function fixedpercent(number1, number2) {
   try {
     number1 = parseFloat(number1)
@@ -500,10 +535,14 @@ export function fixedpercent(number1, number2) {
     return fixednum(number1 / number2 * 100) + '%'
   }
 }
-/* 计算百分比 */
-// 分子number1,分母number2
-// 空 返回'0%'
-// 返回百分比,保留2位小数
+
+/**
+ * @description: 计算百分比2
+ * @param {*} number1 分子
+ * @param {*} number2 分母
+ * @return {*} 空 返回'0%'
+ * 返回百分比,保留2位小数
+ */
 export function fixedpercentEcho0(number1, number2) {
   if (!number1 || !number2) {
     return '0%'
@@ -512,7 +551,11 @@ export function fixedpercentEcho0(number1, number2) {
   }
 }
 
-/* table空值提示 */
+/**
+ * @description: table空值提示
+ * @param {*}
+ * @return {*}
+ */
 export function tableDataNull() {
   Message({
     message: errorCode['1001'],
@@ -520,14 +563,18 @@ export function tableDataNull() {
   })
 }
 
-// 处理日期
-// formattableDate('202001') "2020年01月"
-// formattableDate('202001~202002') "2020年01月~2020年02月"
-// formattableDate() false
-// @params state
-// W 周 "2020年第01周~2020年第02周"
-// D 日 "2020年01月02日"
-// Y 年 "2020年01月~2020年03月"
+/**
+ * @description: 处理日期
+ * @param {*} date
+ * @param {*} state
+ * W 周 "2020年第01周~2020年第02周"
+ * D 日 "2020年01月02日"
+ * Y 年 "2020年01月~2020年03月"
+ * @return {*}
+ * formattableDate('202001') "2020年01月"
+ * formattableDate('202001~202002') "2020年01月~2020年02月"
+ * formattableDate() false
+ */
 export function formattableDate(date, state) {
   const formatedate = (fdate) => {
     if (fdate) {
@@ -560,7 +607,14 @@ export function formattableDate(date, state) {
   }
 }
 
-// 计算同比
+/**
+ * @description: 计算同比
+ * @param {*} a
+ * @param {*} b
+ * @param {*} c
+ * @param {*} d
+ * @return {*}
+ */
 export function yoyBasis(a, b, c, d) {
   if (isNaN(a / b >= c / d) || isNaN(a / b) || isNaN(c / d)) {
     return {
@@ -574,7 +628,13 @@ export function yoyBasis(a, b, c, d) {
     percent: Math.abs(fixednum(basepercent * 100)) + '%'
   }
 }
-// 相较去年
+
+/**
+ * @description: 相较去年
+ * @param {*} cur 当年
+ * @param {*} last 去年
+ * @return {*}
+ */
 export function compairLastYear(cur, last) {
   if (isNaN(cur) || isNaN(last)) {
     return {
@@ -589,7 +649,12 @@ export function compairLastYear(cur, last) {
   }
 }
 
-// 获取天数 date2不传为当年0101
+/**
+ * @description: 获取天数 date2不传为当年0101
+ * @param {*} date1
+ * @param {*} date2
+ * @return {*}
+ */
 export function DateDiff(date1, date2) {
   const oDate1 = new Date(date1).getTime()
   let oDate2 = ''
@@ -600,13 +665,22 @@ export function DateDiff(date1, date2) {
   }
   return parseInt(Math.abs(oDate1 - oDate2) / 1000 / 60 / 60 / 24) + 1
 }
-// 获取当年天数
+
+/**
+ * @description: 获取当年天数
+ * @param {*} date1
+ * @return {*}
+ */
 export function DateCurrentyearDiff(date1) {
   const oDate1 = new Date(date1).getFullYear()
   return DateDiff(oDate1 + '-12-31')
 }
 
-// 获取本月，若为一号返回上个月
+/** 
+ * @description: 获取本月，若为一号返回上个月
+ * @param {*}
+ * @return {*}
+ */
 export function getthismonth() {
   const dt = new Date()
   if (dt.getDate() === 1) {
