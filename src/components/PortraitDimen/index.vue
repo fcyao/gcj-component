@@ -186,23 +186,18 @@ export default {
       const isGCWLabel = ['助手端登录情况', '功能模块偏好', '渠道/平台使用偏好']
       let result = true
       if (this.userPv === '0' && (this.userPvCondition === 'eq' || this.userPvCondition === 'lt' || this.userPvCondition === 'lte')) {
-        // 6）“访问频次”、“访问天数”、“用户留存情况”、“功能模块偏好”、“渠道/平台使用偏好”：应用频次设置“等于0”时，此维度不可选、不展示
-        result = !isPvnotShowLabel.includes(data)
+       result = !isPvnotShowLabel.includes(data)
         if (!result) return false
       }
       if (this.commonPcode === '-100000') {
-        // 1）“账号授权模式/账号角色“：仅限账号体系产品，当【产品/事件组功能编码所属产品/用户分群所属产品】为广材助手时，此维度不可选、不展示
-        // 2）“资产分配情况”：若查询对象中无资产(广材助手)，则不显示此维度卡片
         result = !isAcountAssetLabel.includes(data)
         if (!result) return false
       }
       if (this.commonPcode !== '-100000' && this.commonPcode !== '-100002') {
-        // 4）“微信端登录情况”、“本年活动参与次数”、“本年会员日参与次数”：仅限广材网和广材助手，当【产品/事件组功能编码所属产品/用户分群所属产】为广材网或广材助手时，此维度才可选、可展示
         result = !isGCLabel.includes(data)
         if (!result) return false
       }
       if (this.commonPcode !== '-100002') {
-        // 5）“助手端登录情况”、“功能模块偏好”、“渠道/平台使用偏好”：仅限广材网，当【产品/事件组功能编码所属产品/用户分群所属产品】为广材网时，此维度才可选、可展示
         result = !isGCWLabel.includes(data)
         if (!result) return false
       }

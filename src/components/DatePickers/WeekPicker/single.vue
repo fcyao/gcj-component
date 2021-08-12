@@ -15,8 +15,8 @@
   </div>
 </template>
 <script>
-import { getYearWeek } from '@/utils/index'
-import { parseTime } from '@/utils/ruoyi'
+import { getYearWeek } from '@/utils/lib/index'
+import { parseTime } from '@/utils/lib/ruoyi'
 export default {
   name: 'WeekSinglePicker',
   components: {

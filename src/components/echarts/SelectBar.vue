@@ -5,7 +5,7 @@
   </div>
 </template>
 <script>
-import resize from '@/utils/charts/mixins/resize'
+import resize from '@/utils/lib/resize'
 import _ from 'lodash'
 export default {
   name: 'Bar',

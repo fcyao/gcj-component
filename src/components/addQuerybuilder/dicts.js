@@ -1,5 +1,5 @@
-import { Branch2021 } from '@/utils/dicCode'
-import { CustomType } from '@/utils/dicCode'
+import { Branch2021 } from '@/utils/lib/dicCode'
+import { CustomType } from '@/utils/lib/dicCode'
 const assertConf = [
   { dictLabel: '包含', dictValue: '包含' },
   { dictLabel: '等于', dictValue: '等于' },
@@ -83,7 +83,6 @@ export default [
   { dictLabel: '跟进状态', dictValue: '跟进状态', assert: [assertConf[1]], tobe: isFollowup },
   { dictLabel: '连续购买年限', dictValue: '连续购买年限', assert: [assertConf[1], assertConf[6]], tobe: [] },
   { dictLabel: '模块应用偏好', dictValue: '模块应用偏好', assert: [assertConf[1], assertConf[0]], tobe: moduleUse },
-  { dictLabel: '2020年8月广材网网页端会员日互动次数', dictValue: '2020年8月广材网网页端会员日互动次数', assert: assertConf.slice(1), tobe: [] },
   { dictLabel: '客户大类', dictValue: '客户大类', assert: [assertConf[0]], tobe: CustomType.slice(1) },
   { dictLabel: '账号授权类型', dictValue: '账号授权类型', assert: [assertConf[0]], tobe: accountRightType },
   { dictLabel: '本年使用天数', dictValue: '本年使用天数', assert: assertConf.slice(1), tobe: [] },

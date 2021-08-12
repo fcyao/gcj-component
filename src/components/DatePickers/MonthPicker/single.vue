@@ -15,7 +15,7 @@
   </div>
 </template>
 <script>
-import { parseTime } from '@/utils/ruoyi'
+import { parseTime } from '@/utils/lib/ruoyi'
 export default {
   name: 'SingleMonthPicker',
   props: {

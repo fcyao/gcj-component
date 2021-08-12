@@ -1,7 +1,7 @@
 
-import errorCode from '@/utils/errorCode'
+import errorCode from '@/utils/lib/errorCode'
 import { Message } from 'element-ui'
-import { parseTime } from '@/utils/ruoyi'
+import { parseTime } from '@/utils/lib/ruoyi'
 /**
  * 表格时间格式化
  */

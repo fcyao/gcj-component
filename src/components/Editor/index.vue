@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import { getToken } from '@/utils/auth'
+import { getToken } from '@/utils/lib/auth'
 
 // 工具栏配置
 const toolbarOptions = [

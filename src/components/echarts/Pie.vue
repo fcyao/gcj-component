@@ -2,7 +2,7 @@
   <div ref="chart" style="width:100%;height:100%" />
 </template>
 <script>
-import resize from '@/utils/charts/mixins/resize'
+import resize from '@/utils/lib/resize'
 export default {
   name: 'Pie',
   mixins: [resize],

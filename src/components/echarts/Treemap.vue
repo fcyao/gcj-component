@@ -2,8 +2,8 @@
   <div ref="chart" style="width:100%;height:100%" />
 </template>
 <script>
-import resize from '@/utils/charts/mixins/resize'
-import { fixednum } from '@/utils/index'
+import resize from '@/utils/lib/resize'
+import { fixednum } from '@/utils/lib/index'
 export default {
   name: 'Treemap',
   mixins: [resize],

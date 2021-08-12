@@ -12,14 +12,14 @@ import Element from 'element-ui'
 import '@/assets/styles/element-variables.scss'
 import '@/assets/styles/index.scss' // global css
 import '@/assets/styles/ruoyi.scss' // ruoyi css
-// import { download } from '@/utils/request'
+// import { download } from '@/utils/lib/request'
 import * as echarts from 'echarts'
 
 // import { getDicts } from '@/api/system/dict/data'
 // import { getConfigKey } from '@/api/system/config'
 // import { postIolog } from '@/api/system/operlog'
-import { parseTime, resetForm, addDateRange, selectDictLabel, handleTree, getnDayago } from '@/utils/ruoyi'
-import { tableDataFormat, tableDataNull, getDictValue } from '@/utils/index'
+import { parseTime, resetForm, addDateRange, selectDictLabel, handleTree, getnDayago } from '@/utils/lib/ruoyi'
+import { tableDataFormat, tableDataNull, getDictValue } from '@/utils/lib/index'
 import Emptybox from '@/components/emptybox'
 import './assets/basecss.css'
 
